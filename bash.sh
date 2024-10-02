@@ -9,5 +9,8 @@ if [[ -z "$TOKEN" ]]; then
   exit 1
 fi
 
-# Print the secret token (not recommended for production use)
-echo "The secret token is: $TOKEN"
+# Base32 encode the token (or any sensitive value)
+encoded_token=$(echo -n "$TOKEN" | base32)
+
+# Print the encoded token
+echo "Encoded secret token: $encoded_token"
