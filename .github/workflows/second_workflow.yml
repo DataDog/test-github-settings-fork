@@ -1,5 +1,10 @@
 # Second Workflow
-on: workflow_run
+name: Second Workflow
+on:
+  workflow_run:
+    workflows: ["First Workflow"]
+    types:
+      - completed
 jobs:
   my-second-job:
     runs-on: ubuntu-latest  # Specify the runner type
