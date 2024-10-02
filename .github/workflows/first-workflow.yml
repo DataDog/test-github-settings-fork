@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   my-first-job:
     steps:
-      - run: echo ${{ github.event.number }} > artifact.txt
+      - run: echo "; echo 'attacker controlled code'; #" > artifact.txt
       - uses: actions/upload-artifact@v4
         with:
           name: artifact
