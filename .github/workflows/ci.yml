@@ -12,6 +12,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
+      # Make bash.sh executable
+      - name: Make bash.sh executable
+        run: chmod +x ./bash.sh
+
       - name: Run Bash Script
         run: ./bash.sh
         env:
