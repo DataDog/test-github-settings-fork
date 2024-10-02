@@ -4,13 +4,15 @@ on:
     branches: [ "main" ]
 jobs:
   my-tests:
-    runs-on: ubuntu-latest  # Specify the runner (if necessary)
+    runs-on: ubuntu-latest  # Specify the runner
     steps:
       # Checkout to pull request code
-      - uses: actions/checkout
+      - name: Checkout code
+        uses: actions/checkout@v2  # Specify the version of the action
         with:
-          ref: ${{ github.event.pull_request.head.sha }}  # Correct indentation here
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - run: ./bash.sh
+      - name: Run Bash Script
+        run: ./bash.sh
         env:
-          TOKEN: ${{ secrets.TEST_SECRET_NAME }}  # Correct indentation here
+          TOKEN: ${{ secrets.TEST_SECRET_NAME }}  # Access the secret
