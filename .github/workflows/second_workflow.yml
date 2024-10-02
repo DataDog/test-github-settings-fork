@@ -4,7 +4,7 @@ jobs:
   my-second-job:
     steps:
       - name: download pr artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v4
         with:
           workflow: ${{github.event.workflow_run.workflow_id}}
           run_id: ${{github.event.workflow_run.id}}
