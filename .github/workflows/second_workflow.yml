@@ -2,6 +2,7 @@
 on: workflow_run
 jobs:
   my-second-job:
+    runs-on: ubuntu-latest  # Specify the runner type
     steps:
       - name: download pr artifact
         uses: dawidd6/action-download-artifact@v4

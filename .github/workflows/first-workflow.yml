@@ -2,6 +2,7 @@
 on: pull_request
 jobs:
   my-first-job:
+    runs-on: ubuntu-latest  # Specify the runner type
     steps:
       - run: echo ${{ github.event.number }} > artifact.txt
       - uses: actions/upload-artifact@v4
