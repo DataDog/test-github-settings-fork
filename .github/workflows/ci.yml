@@ -1,0 +1,14 @@
+name: CI
+on:
+  pull_request_target:
+    branches: [ "main" ]
+jobs:
+  my-tests:
+    steps:
+      # checkout to pull request code
+      - uses: actions/checkout
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+        - run: ./bash.sh
+            env:
+              TOKEN: "secret_value"
