@@ -1,0 +1,10 @@
+# First Workflow
+on: pull_request
+jobs:
+  my-first-job:
+    steps:
+      - run: echo ${{ github.event.number }} > artifact.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: artifact.txt
