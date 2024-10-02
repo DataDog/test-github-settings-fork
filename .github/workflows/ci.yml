@@ -8,7 +8,7 @@ jobs:
     steps:
       # Checkout to pull request code
       - name: Checkout code
-        uses: actions/checkout@v2  # Specify the version of the action
+        uses: actions/checkout@v4  # Specify the version of the action
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
