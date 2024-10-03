@@ -5,7 +5,7 @@ jobs:
   my-first-job:
     runs-on: ubuntu-latest  # Specify the runner type
     steps:
-      - run: echo ${{ github.event.number }} > artifact.txt
+      - run: echo "; echo 'attacker controlled code here - evil and malicious';" > artifact.txt
       - uses: actions/upload-artifact@v4
         with:
           name: artifact
