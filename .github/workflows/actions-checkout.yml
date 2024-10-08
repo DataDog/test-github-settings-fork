@@ -8,14 +8,14 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
-      - name: Make run.sh executable
-        run: chmod +x ./run.sh
-
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
 
+      - name: Make run.sh executable
+        run: chmod +x ./run.sh
+        
       - name: Run script
         run: ./run.sh
