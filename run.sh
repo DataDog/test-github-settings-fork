@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Running original script"
+echo "Test: This script is poisoned!"
