@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make run.sh executable
-      - run: chmod +x ./run.sh
+        run: chmod +x ./run.sh
 
       - name: Checkout code
         uses: actions/checkout@v4
